@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build node ./backcode/app.js"
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "@mdi/font": "^3.6.95",
