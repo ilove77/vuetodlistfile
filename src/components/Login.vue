@@ -39,9 +39,6 @@
                 <v-col cols="12" sm="4" class="text-center">
                   <v-btn  @click="onregister">註冊</v-btn>
                 </v-col>
-                  <v-col cols="12" sm="4" class="text-center">
-                  <v-btn link :href = 'url' class="mr-sm-15"  >google登入</v-btn>
-                </v-col>
               </v-row>
             </v-container>
           </form>
@@ -143,7 +140,7 @@ export default {
     return {
       value: {
         acc: '555555',
-        pass: '44444444'
+        pass: '55555555'
       },
       url:'',
     }

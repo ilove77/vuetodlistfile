@@ -3,7 +3,7 @@
   <div>
     <ValidationObserver ref="additems" v-slot="{invalid}">
       <div @click="onclick" :class="ss" class="body"></div>
-      <div :class="ss" class="gg flex-column">
+      <div :class="ss" class="gg flex-column" style="max-height:1100px;overflow-y:auto;">
         <div class="header">
           <!-- <div>{{edit}}</div> -->
           <v-container>
@@ -53,14 +53,14 @@
             <v-row justify-space-between>
               <v-col cols="6">
                 <v-row align="center" class="flex-nowrap">
-                  <label class="text-no-wrap mx-4 mt-n6">起始</label>
+                  <label class="text-no-wrap mx-sm-4 mx-2 mt-n6">起始</label>
                   <v-menu
                     v-model="menu"
                     :close-on-content-click="false"
                     :nudge-right="40"
                     transition="scale-transition"
                     offset-y
-                    style="min-width:400px"
+                    style="min-width:200px"
                   >
                     <template v-slot:activator="{ on, attrs }">
                       <v-text-field outlined v-model="date" readonly v-bind="attrs" v-on="on" :disabled ="$store.state.thing.inputoredit"></v-text-field>
@@ -71,7 +71,7 @@
               </v-col>
               <v-col cols="6" v-if="finishend">
                 <v-row align="center" class="flex-nowrap">
-                  <label class="text-no-wrap mx-4 mt-n6">截止</label>
+                  <label class="text-no-wrap mx-2 mx-xs-2 mt-n6">截止</label>
                   <v-menu
                     v-model="menu2"
                     :close-on-content-click="false"
@@ -372,8 +372,9 @@ export default {
 }
 @media screen and (min-width: 600px) {
   .gg {
-    height: 70%;
+    height: 80%;
   }
+
 }
 
 .header {

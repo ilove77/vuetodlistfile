@@ -126,7 +126,7 @@ app.get('/deleteproject', async (req, res) => {
     })
 })
 app.get('/editprojectname', async (req, res) => {
-    await project.updateOne({}, { items: req.query.item })
+    await project.updateOne({acc:req.query.acc}, { items: req.query.item })
     // console.log(flag)
     let flag = await project.findOne({ acc: req.query.acc })
     res.json(flag.items)
@@ -275,5 +275,13 @@ app.get('/callback2', async (req, res) => {
     // }
 
 })
-app.listen(6050)
+if(process.env.NODE_ENV === "production") {
+    app.use(ServeStatic(path.join(__dirname,"/..")))
+    
+    app.get(/.*/, function (req, res) {
+        res.sendFile(path.join(__dirname,"/..","/index.html"));
+      });
+    }
+    // 6050
+app.listen(process.env.PORT || 6050)
 console.log("成功")

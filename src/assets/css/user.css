@@ -1,5 +1,7 @@
-#app,body{
-    height: 100%;
+#app,body,html{
+    height: 100vh;
+    min-width:1000px;
+    overflow:auto;
 }
 a{
     text-decoration: none;

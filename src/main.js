@@ -11,7 +11,13 @@ import './assets/css/new style/style.css'
 import './assets/css/user.css'
 Vue.use(axios)
 Vue.prototype.$http = axios
-axios.defaults.baseURL = 'http://localhost:6050'
+if(process.env.NODE_ENV === 'production'){
+  axios.defaults.baseURL = 'https://newtodolist.herokuapp.com'
+  
+}
+else{
+  axios.defaults.baseURL = 'http://localhost:6050'
+}
 axios.defaults.withCredentials = true
 // 添加请求拦截器
 

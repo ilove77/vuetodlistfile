@@ -11,13 +11,13 @@
       @addprojectname="addprojectname"
     ></AddProject>
     <!-- 使用app屬性會自動應用位置：fixed到佈局元素。如果你得應用程序需要一個absolute元素，你可以通過使用absolute屬性來覆蓋此功能。 -->
-    <v-app-bar color="#373D41" height="80" app clipped-left>
+    <v-app-bar color="#373D41" height="80" app clipped-left style="min-width:800px;">
       <v-container fluid>
         <v-row align="center">
           <v-col cols="3">
             <span>
               <!-- <div>{{items}}</div> -->
-              <router-link to="/welcome">TODOLIST</router-link>
+              <div style="color:red; font-weight:700; font-size:15px">TODOLIST</div>
               <!-- <div class="icon-pencil"></div> -->
             </span>
           </v-col>
@@ -43,11 +43,11 @@
     </v-app-bar>
     <!-- app cliped 讓drawer在app-bar下面 permanent不管多尺寸多少都會顯示 -->
     <!-- <div>{{ss}}</div> -->
-    <v-navigation-drawer color="#26A69A" app absolute clipped permanent width="280" style="overflow-y:auto">
+    <v-navigation-drawer color="#26A69A" app absolute clipped permanent width="280" style="">
       <div class="text-center drawer-title">Project List</div>
       <!-- <div class="border">{{ss}}</div> -->
       <v-container>
-        <v-row justify="center" v-for="(item,index) in itemss" :key="index">
+        <v-row justify="center" v-for="(item,index) in this.$store.state.thing.items" :key="index">
           <v-col class="text-left" col="12">
             <!-- iink啟動to屬性 to連結到要的路由 -->
             <!-- link to就是a標籤屬性 任何嵌在a屬性都會觸發a屬性 -->

@@ -6,14 +6,11 @@
     <div class="fixedd">
       <div v-if="flag == false">
         <v-text-field solo v-model.trim="temp"></v-text-field>
-        <v-btn solo @click.stop="addprojectname">123</v-btn>
+        <v-btn solo @click.stop="addprojectname">添加</v-btn>
       </div>
       <div v-else>
-        <v-card height = "700px"
-        >
           <v-text-field solo v-model.trim="sonvalue"></v-text-field>
-          <v-btn solo @click.stop="editprojectname">123</v-btn>
-        </v-card>
+          <v-btn solo @click.stop="editprojectname">修改project name</v-btn>
       </div>
     </div>
   </div>
@@ -94,7 +91,7 @@ export default {
 }
 .fixedd {
   width: 50%;
-  height: 50%;
+  height: 20%;
   background: black;
   position: fixed;
   left: 0;
@@ -106,6 +103,8 @@ export default {
          */
   z-index: 6;
   border-radius: 6px;
-  overflow: hidden;
+  overflow-x: auto;
+  min-width: 300px;
+  min-height: 500px;
 }
 </style>

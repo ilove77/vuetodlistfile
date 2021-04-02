@@ -1,8 +1,8 @@
 <!--  -->
 <template>
-   <div id = "app" >
-     <v-app>
-       <router-view></router-view>
+   <div id = "app">
+     <v-app >
+       <router-view ></router-view>
        <Thing ></Thing>
      </v-app>
     
