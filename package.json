@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "start": "node .backcode/app.js"
+    "start": "node ./backcode/app.js"
   },
   "dependencies": {
     "@mdi/font": "^3.6.95",
