@@ -12,7 +12,7 @@ import './assets/css/user.css'
 Vue.use(axios)
 Vue.prototype.$http = axios
 if(process.env.NODE_ENV === 'production'){
-  axios.defaults.baseURL = 'https://newtodolist.herokuapp.com'
+  axios.defaults.baseURL = 'https://vuetodolistsss.herokuapp.com'
   
 }
 else{

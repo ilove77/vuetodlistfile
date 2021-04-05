@@ -11,8 +11,8 @@
       @addprojectname="addprojectname"
     ></AddProject>
     <!-- 使用app屬性會自動應用位置：fixed到佈局元素。如果你得應用程序需要一個absolute元素，你可以通過使用absolute屬性來覆蓋此功能。 -->
-    <v-app-bar color="#373D41" height="80" app clipped-left style="min-width:800px;">
-      <v-container fluid>
+    <v-app-bar color="#373D41" height="80" app clipped-left style="position:absolute" >
+      <v-container fluid style="min-width:800px">
         <v-row align="center">
           <v-col cols="3">
             <span>

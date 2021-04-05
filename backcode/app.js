@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyparser = require('body-parser')
 const cors = require('cors')
+const path = require('path')
 const Session = require('express-session')
 const app = express()
 app.use(express.static(__dirname))
@@ -276,7 +277,7 @@ app.get('/callback2', async (req, res) => {
 
 })
 if(process.env.NODE_ENV === "production") {
-    app.use(ServeStatic(path.join(__dirname,"/..")))
+    app.use(express.static(path.join(__dirname,"/..")))
     
     app.get(/.*/, function (req, res) {
         res.sendFile(path.join(__dirname,"/..","/index.html"));
